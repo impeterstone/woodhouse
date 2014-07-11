@@ -11,7 +11,7 @@
   } else {
     root.Woodhouse = factory(root, root._, (root.jQuery || root.$), root.Backbone, {});
   }
-}(this, function(root, Backbone, _, $) {
+}(this, function(root, _, $, Backbone, Woodhouse) {
   "use strict";
 
   // What is Woodhouse?
