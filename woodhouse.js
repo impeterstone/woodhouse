@@ -7,6 +7,7 @@
       // Export global even in AMD case in case this script is loaded with
       // others that may still expect a global.
       root.Woodhouse = factory(root, Backbone, _, $);
+      return root.Woodhouse;
     });
   } else {
     root.Woodhouse = factory(root, root.Backbone, root._, (root.jQuery || root.$));
