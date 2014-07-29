@@ -2,16 +2,16 @@
   "use strict";
   // Set up Backbone appropriately for the environment. Start with AMD.
   if (typeof define === 'function' && define.amd) {
-    define(['backbone', 'underscore', 'jquery'], function(Backbone, _, $) {
+    define(['underscore', 'jquery', 'backbone', 'exports'], function(_, $, Backbone, exports) {
 
       // Export global even in AMD case in case this script is loaded with
       // others that may still expect a global.
-      root.Woodhouse = factory(root, Backbone, _, $);
+      root.Woodhouse = factory(root, _, $, Backbone, exports);
     });
   } else {
-    root.Woodhouse = factory(root, root.Backbone, root._, (root.jQuery || root.$));
+    root.Woodhouse = factory(root, root._, (root.jQuery || root.$), root.Backbone, {});
   }
-}(this, function(root, Backbone, _, $) {
+}(this, function(root, _, $, Backbone, Woodhouse) {
   "use strict";
 
   // What is Woodhouse?
